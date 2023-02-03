@@ -1,0 +1,93 @@
+:root {
+  /* VARIABLES */
+
+  /* TEXT AND TITLE SIZE */
+  /* 14 px : footer, labels etc... */
+  --textXS: 0.875rem;
+  /* 16px : body text - minimal size for text */
+  --textS: 1rem;
+  /* 20px : normal text (ex: small description) */
+  --textM: 1.25rem;
+  /* 24px : small title (ex: topic title) */
+  --textL: 1.5rem;
+  /* 32px : big title */
+  --textXL: 2rem;
+
+  /* FONT STRETCH */
+  --fw: 600; /* font weight target 100-800 */
+  --fs: 150; /* font stretch target 10-150% */
+  --fontSize: 15; /* vw units */
+
+  /* Transition */
+  --transition: 0.2s;
+
+  /* COLORS */
+  --dark-background: #191a20;
+  --medium-background: #2a2b38;
+  --light-background: #3b4554;
+  --light-color: #097acb;
+  --orange-color: #ec9a4e;
+  /* --small-touch: #3a6df0; */
+  --small-touch: #a2d1eb;
+
+  --radius: 10px;
+  --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+/* ==========================================================================
+     #RESET
+     ========================================================================== */
+
+/*
+      A very simple reset that sits on top of css.
+  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre,
+dl,
+dd,
+ol,
+ul,
+button,
+a {
+  border: none;
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+/* Masquage d'element restant accessible aux lecteurs d'écran */
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+     #LAYOUT
+     ========================================================================== */
+.no-found {
+  color: var(--light-color);
+  text-align: center;
+}
+
+.loading {
+  color: var(--light-color);
+  text-align: center;
+}

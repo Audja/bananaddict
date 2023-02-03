@@ -9,7 +9,7 @@ export default function Counter() {
         type="button"
         onClick={() => setCount((oldCount) => oldCount + 1)}
       >
-        count is: {count}
+        Cigarettes fumées : {count}
       </button>
     </p>
   );

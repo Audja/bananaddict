@@ -1,10 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Acme", sans-serif;
 }
 
 code {
@@ -16,19 +14,19 @@ code {
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--light-background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,18 +37,87 @@ code {
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  color: #ec9a4e;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
 }
 
 button {
   font-size: calc(10px + 2vmin);
+}
+
+body {
+  margin: auto;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgb(7, 39, 54) 3%,
+    rgb(31, 68, 100) 38%,
+    rgb(71, 42, 88) 68%,
+    rgb(57, 45, 97) 98%
+  );
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  bottom: -130px;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -150px;
+  animation: wave 18s linear reverse infinite;
+  opacity: 2;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -150px;
+  animation: wave 20s -1s reverse infinite;
+  opacity: 5;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
 }
