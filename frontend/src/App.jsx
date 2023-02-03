@@ -7,7 +7,7 @@ import Consommation from "./pages/Consommation";
 import Liens from "./pages/Liens";
 import Navbar from "./components/Navbar";
 import Resultats from "./pages/Resultats";
-import Soutien from "@pages/Soutien";
+import Soutien from "./pages/Soutien";
 
 function App() {
   return (

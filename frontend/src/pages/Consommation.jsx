@@ -6,8 +6,8 @@ import Dix from "../components/Dix";
 import Vingt from "../components/Vingt";
 
 import "./Consommation.css";
-import Results from "../components/Results";
-import Soutien from "./Soutien";
+
+// eslint-disable-next-line import/order
 import { Link } from "react-router-dom";
 
 function Consommation() {
@@ -20,7 +20,6 @@ function Consommation() {
   const getResult = () => {
     axios.get("http://localhost:5000/resultats/").then((res) => {
       setResult(res.data);
-      console.log(res.data);
     });
   };
 
